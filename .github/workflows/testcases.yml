@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   call-workflow-passing-data:
-    uses: InfocuspSamyakVora/github-actions/blob/main/.github/workflows/secondary.yml@main
+    uses: InfocuspSamyakVora/github-actions/.github/workflows/secondary.yml@main
   build:
 
     runs-on: ubuntu-latest
