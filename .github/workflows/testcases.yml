@@ -15,10 +15,12 @@ permissions:
   contents: read
 
 jobs:
+  call-workflow-passing-data:
+    uses: InfocuspSamyakVora/github-actions/blob/main/.github/workflows/secondary.yml@main
   build:
 
     runs-on: ubuntu-latest
-
+    
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -38,3 +40,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: python3 -u -m unittest test_sum.py
+
